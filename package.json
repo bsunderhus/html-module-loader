@@ -1,0 +1,54 @@
+{
+  "name": "html-module-loader",
+  "version": "0.0.1",
+  "author": "Bernardo Sunderhus",
+  "description": "html module loader module for webpack",
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "lint": "eslint src/*.ts tests/*.ts",
+    "test": "npm run jest -- --coverage",
+    "jest": "jest",
+    "pretest": "npm run lint && npm run type-check",
+    "type-check": "tsc"
+  },
+  "dependencies": {
+    "html-minifier": "^4.0.0",
+    "htmlparser2": "^3.10.1",
+    "loader-utils": "^1.2.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.4",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/html-minifier": "^3.5.3",
+    "@types/htmlparser2": "^3.10.0",
+    "@types/jest": "^24.0.15",
+    "@types/loader-utils": "^1.1.3",
+    "@types/memory-fs": "^0.3.2",
+    "@types/webpack": "^4.4.34",
+    "@typescript-eslint/eslint-plugin": "^1.11.0",
+    "@typescript-eslint/parser": "^1.11.0",
+    "babel-loader": "^8.0.6",
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-config-standard": "^13.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jest": "^22.7.2",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "html-loader": "^0.5.5",
+    "jest": "^24.8.0",
+    "memory-fs": "^0.4.1",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.5.3",
+    "webpack": "^4.35.3"
+  }
+}

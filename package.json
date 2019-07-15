@@ -2,6 +2,12 @@
   "name": "html-module-loader",
   "version": "0.0.1",
   "author": "Bernardo Sunderhus",
+  "repository": {
+    "url": "https://github.com/bsunderhus/html-module-loader"
+  },
+  "bugs": {
+    "url": "https://github.com/bsunderhus/html-module-loader/issues"
+  },
   "description": "html module loader module for webpack",
   "license": "MIT",
   "main": "index.js",
@@ -44,11 +50,25 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
     "html-loader": "^0.5.5",
+    "husky": "^3.0.0",
     "jest": "^24.8.0",
+    "lint-staged": "^9.2.0",
     "memory-fs": "^0.4.1",
     "prettier": "^1.18.2",
     "ts-jest": "^24.0.2",
     "typescript": "^3.5.3",
     "webpack": "^4.35.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "tsc --noEmit",
+      "eslint --fix",
+      "git add"
+    ]
   }
 }

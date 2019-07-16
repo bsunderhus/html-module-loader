@@ -10,6 +10,7 @@ script: npm run pretest && npm run coverage
 deploy:
   provider: npm
   email: bernardo.sunderhus@gmail.com
+  skip_cleanup: true
   api_key:
     secure: ao8kN1RvZadjrl6D8MjprkzcHTb+jOXgZ/G4Jyj1824pGLFtNwpDW4/EXjS/NZ1vZlp0CG6dPZ1ZBAaInaXx1P1k5fIMzH9mggmMyxXZVK3Dd4kxgeMW5gLdjcQJwDSjcvChb1WX/irQ53eIoVQ+6IYEPtwZmutOwaNtzZSuv8gBjO6VpVZHrQnRFSNbwpkRjhDsp2AdjGfdA+Ra2jv+Fq7W20toIQsoBGNBtHVTnCH5AaMFPTPuBcODS6YzbStnwelhXWUea9L2498KB+lp9U+RG4wUnAloa/VrIldiM7fs2i3dF36kINw7H6UMsIOJA6S/AUbyNu+fX/KjJlUS3wPzZ0gIOK8xNW6tI0tUjq/kNRlj6buScQ3QdunH4uscICUYoLtIpTT9+Ir8MSkYjdE7zy/EX+GU+wWYw/3vbVzxhWgq7xInyfTpZFbh7vSSp67ocbGFqWo52emu67qxYEKBZXkjwc4KYnJFpKiTpHCucMd8uNDjcOJJ1o/JiwF/wf3dhq5fV9BWEAsnDO4ki/YqHovDoIOA2stc0ENIruH11VyTvveLR4CfS63xiSUffjmxJOyaVuvgs233x1U2tiVWSPKbfzFq1ZHyY3bwl0jo4FA6718QiLP8n1/dbjsOOcRkCYkCzS3qTEpsxI2OMEJYtdG2RGenKRptFvaZPek=
   on:

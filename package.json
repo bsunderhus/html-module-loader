@@ -23,7 +23,9 @@
     "type-check": "tsc",
     "bundle": "tsc -p tsconfig.build.json",
     "prepublish": "npm test && npm run bundle",
-    "clean": "rimraf dist"
+    "postpublish": "npm run clean",
+    "clean": "rimraf dist",
+    "coverage": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "dependencies": {
     "html-minifier": "^4.0.0",

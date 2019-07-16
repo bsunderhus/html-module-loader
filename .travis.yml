@@ -1,6 +1,7 @@
 language: node_js
 
-script: jest --coverage --coverageReporters=text-lcov | coveralls
+before_script: npm run bundle
+script: npm run coverage
 
 # deploy:
 #   provider: npm

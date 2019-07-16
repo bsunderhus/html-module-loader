@@ -4,3 +4,4 @@ coverage
 *.sw*
 
 npm-debug.log
+dist

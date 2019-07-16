@@ -15,7 +15,7 @@ declare global {
     document: Document
   }
 }
-export default function loader(this: loader.LoaderContext, source: string | Buffer) {
+export default function(this: loader.LoaderContext, source: string | Buffer) {
   this.async()
   const options: Options = {
     esModule: true,

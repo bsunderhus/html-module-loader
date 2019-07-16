@@ -22,8 +22,8 @@
     "pretest": "npm run lint && npm run type-check",
     "type-check": "tsc",
     "bundle": "tsc -p tsconfig.build.json",
-    "prepublish": "npm test && npm run bundle",
-    "postpublish": "npm run clean",
+    "prepare": "npm run bundle",
+    "prepublishOnly": "npm test",
     "clean": "rimraf dist",
     "coverage": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },

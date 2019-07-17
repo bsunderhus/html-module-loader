@@ -2,7 +2,8 @@
   "name": "NPM container",
   "dockerFile": "Dockerfile",
   "appPort": [],
-  "postCreateCommand": "npm install",
+  "runArgs": [ "-v", "${env:HOME}${env:USERPROFILE}/.ssh:/root/.ssh-localhost:ro" ],
+	"postCreateCommand": "mkdir -p ~/.ssh && cp -r ~/.ssh-localhost/* ~/.ssh && chmod 700 ~/.ssh && chmod 600 ~/.ssh/* && npm install",
   "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode", "closedcontour.very-smart-select"],
   "settings": {
     "eslint.autoFixOnSave": true,

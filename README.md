@@ -5,8 +5,10 @@
 
 <div align="center">
   <img width="200" height="200" src="https://worldvectorlogo.com/logos/html5.svg">
-  <img width="200" height="200" vspace="" hspace="25"
-    src="https://seeklogo.com/images/J/javascript-js-logo-2949701702-seeklogo.com.png">
+  <a href="https://github.com/webpack/webpack">
+    <img width="200" height="200" vspace="" hspace="25"
+      src="https://worldvectorlogo.com/logos/webpack.svg">
+  </a>
   <h1>
   <a rel="noopener" target="_blank" href="https://github.com/w3c/webcomponents/blob/gh-pages/proposals/html-modules-explainer.md">HTML Module</a> Loader
   </h1>

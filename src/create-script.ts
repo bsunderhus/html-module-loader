@@ -21,7 +21,7 @@ export default function createScript(document: HTML.Document, rawScript: string,
   `
   return `
     ${parser}
-    ${rawScript.replace('import.meta.document', IMPORT_META_DOCUMENT)}
+    ${rawScript.replace(/import\.meta\.document/g, IMPORT_META_DOCUMENT)}
     ${!rawScript.includes(exprt) ? `${exprt} ${IMPORT_META_DOCUMENT};` : ''}
   `
 }

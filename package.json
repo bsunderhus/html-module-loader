@@ -11,6 +11,11 @@
   "publishConfig": {
     "access": "public"
   },
+  "keywords": [
+    "webpack",
+    "loader",
+    "html"
+  ],
   "description": "html module loader module for webpack",
   "license": "MIT",
   "main": "dist/index.js",

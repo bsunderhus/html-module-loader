@@ -1,6 +1,6 @@
 {
   "name": "html-module-loader",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "author": "Bernardo Sunderhus",
   "repository": {
     "url": "https://github.com/bsunderhus/html-module-loader"

@@ -13,7 +13,7 @@ function createHTMLString(document: HTML.Document, options?: boolean | MinifierO
 }
 
 export default function createScript(document: HTML.Document, options: Options): string {
-  const defaultStatement = createExportStatement(options)
+  const exprt = createExportStatement()
   const HTMLString = createHTMLString(document, options.minify)
   const script = document.reduce((acc, { name, attribs, children }) => {
     if (name === 'script' && attribs && attribs.type === 'module' && children) {
@@ -28,6 +28,6 @@ export default function createScript(document: HTML.Document, options: Options):
   return `
     ${parser}
     ${script.replace('import.meta.document', IMPORT_META_DOCUMENT)}
-    ${!script.includes(defaultStatement) ? `${defaultStatement} ${IMPORT_META_DOCUMENT};` : ''}
+    ${!script.includes(exprt) ? `${exprt} ${IMPORT_META_DOCUMENT};` : ''}
   `
 }

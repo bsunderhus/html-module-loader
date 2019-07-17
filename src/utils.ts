@@ -1,8 +1,7 @@
 import * as HTML from './html-parser'
-import { Options } from './index'
 
-export function createExportStatement({ esModule }: Options) {
-  return esModule ? 'export default' : 'module.exports ='
+export function createExportStatement() {
+  return 'export default'
 }
 
 export function sourceToString(source: string | Buffer): string {

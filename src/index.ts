@@ -6,7 +6,6 @@ import { Options as MinifyOptions } from 'html-minifier'
 import createScript from './create-script'
 
 export interface Options extends OptionObject {
-  esModule?: boolean
   minify?: boolean | MinifyOptions
 }
 

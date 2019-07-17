@@ -1,18 +1,16 @@
 language: node_js
-
 install: npm ci
 cache:
   directories:
   - "$HOME/.npm"
-
 script: npm run pretest && npm run coverage
-
 deploy:
   provider: npm
-  email: bernardo.sunderhus@gmail.com
   skip_cleanup: true
+  email: bernardo.sunderhus@gmail.com
   api_key:
-    secure: ao8kN1RvZadjrl6D8MjprkzcHTb+jOXgZ/G4Jyj1824pGLFtNwpDW4/EXjS/NZ1vZlp0CG6dPZ1ZBAaInaXx1P1k5fIMzH9mggmMyxXZVK3Dd4kxgeMW5gLdjcQJwDSjcvChb1WX/irQ53eIoVQ+6IYEPtwZmutOwaNtzZSuv8gBjO6VpVZHrQnRFSNbwpkRjhDsp2AdjGfdA+Ra2jv+Fq7W20toIQsoBGNBtHVTnCH5AaMFPTPuBcODS6YzbStnwelhXWUea9L2498KB+lp9U+RG4wUnAloa/VrIldiM7fs2i3dF36kINw7H6UMsIOJA6S/AUbyNu+fX/KjJlUS3wPzZ0gIOK8xNW6tI0tUjq/kNRlj6buScQ3QdunH4uscICUYoLtIpTT9+Ir8MSkYjdE7zy/EX+GU+wWYw/3vbVzxhWgq7xInyfTpZFbh7vSSp67ocbGFqWo52emu67qxYEKBZXkjwc4KYnJFpKiTpHCucMd8uNDjcOJJ1o/JiwF/wf3dhq5fV9BWEAsnDO4ki/YqHovDoIOA2stc0ENIruH11VyTvveLR4CfS63xiSUffjmxJOyaVuvgs233x1U2tiVWSPKbfzFq1ZHyY3bwl0jo4FA6718QiLP8n1/dbjsOOcRkCYkCzS3qTEpsxI2OMEJYtdG2RGenKRptFvaZPek=
+    secure: D68+hg/1PUgnyyBxdjIoQb3qAnpiB67EqV3NztYQFfAFUSRwEY8GQzG5wrbL1+sKOdJHBeHtxhQ73vJ5S1n1Hu7E5Oueq7tNFBvknaTX52FiEDoQeSYoENsIV9fSPgAXDlqHDQiEc/NBb8EQWFppaur7QT0Uaa0mdHe6mzg0zMpnuwDAWdEBZVyYq0vk5gi9Gu3Eexyb4Rc3QNio/YfP0/uTie2GJ9vTH0BPwfDtICDmL5E/tIG5XxcUgZlfaM6fgvUK9om09FqT6nBLpLeUkXOTrmtyzhx9Q9xvs+75WkakAsRZzC3X+KHqdhEfonwPK7iwQVMzMBu+0Fk5cBCzHR2ybBUmUO6ciaUIHyORUTpQHTQm7JEcz/1hoY1OdltOzcg1hRZXyOOyEMvsWqBIemic6ceLf0tUj1DWFL7X2BBZbynCGP5MAMU+iRqojQVKmz7eoNuMeoYk6aGfSd03pCBa6MOmdefCuTLFm+4DObwuihtGMSj8SO90xhV1+IKoJil1HITZlJgaVOA3Olj1b5LIy2afqfanLrM3JCd0wMF052bVP4nVxGb5qE2z4Ks5AK6Bl7zC8Ha9X2ZSOt5QahZgZwLNMXDqA5tMys+tdbnatA8Njsvz6/CiFjuxtFlrIFKGEDXX98Njd0lr4iUdIH95U+VuArkrldvjFf32coY=
   on:
     tags: true
+    branch: master
     repo: bsunderhus/html-module-loader

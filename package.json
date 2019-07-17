@@ -8,6 +8,9 @@
   "bugs": {
     "url": "https://github.com/bsunderhus/html-module-loader/issues"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "html module loader module for webpack",
   "license": "MIT",
   "main": "dist/index.js",

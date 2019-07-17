@@ -12,22 +12,16 @@ function createHTMLString(document: HTML.Document, options?: boolean | MinifierO
   return HTMLString
 }
 
-export default function createScript(document: HTML.Document, options: Options): string {
+export default function createScript(document: HTML.Document, rawScript: string, options: Options): string {
   const exprt = createExportStatement()
   const HTMLString = createHTMLString(document, options.minify)
-  const script = document.reduce((acc, { name, attribs, children }) => {
-    if (name === 'script' && attribs && attribs.type === 'module' && children) {
-      return acc + children.reduce((acc, { data = '' }) => acc + data, '')
-    }
-    return acc
-  }, '')
   const parser = `
     const ${PARSER} = new DOMParser();
     const ${IMPORT_META_DOCUMENT} = ${PARSER}.parseFromString(\`${HTMLString}\`, 'text/html');
   `
   return `
     ${parser}
-    ${script.replace('import.meta.document', IMPORT_META_DOCUMENT)}
-    ${!script.includes(exprt) ? `${exprt} ${IMPORT_META_DOCUMENT};` : ''}
+    ${rawScript.replace('import.meta.document', IMPORT_META_DOCUMENT)}
+    ${!rawScript.includes(exprt) ? `${exprt} ${IMPORT_META_DOCUMENT};` : ''}
   `
 }

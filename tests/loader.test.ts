@@ -38,6 +38,7 @@ test('Loader compiles from html to js', async () => {
   const stats = await compiler('./template.html')
   const json = stats.toJson()
   if (json.modules && json.modules.length) {
+    console.log(json.modules[0].source)
     expect(typeof json.modules[0].source).toBe('string')
   }
   expect(true).toBe(true)

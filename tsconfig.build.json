@@ -5,6 +5,7 @@
     "noEmit": false,
     "declaration": true,
     "isolatedModules": false,
+    "esModuleInterop": true,
     "allowJs": false,
     "module": "commonjs",
     "target": "es5"

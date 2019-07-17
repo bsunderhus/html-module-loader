@@ -1,6 +1,6 @@
 import { getOptions, OptionObject } from 'loader-utils'
 import { loader } from 'webpack'
-import { sourceToString, filterDocument } from './utils'
+import { sourceToString, filterDocument, extractScript } from './utils'
 import * as HTML from './html-parser'
 import { Options as MinifyOptions } from 'html-minifier'
 import createScript from './create-script'
@@ -22,8 +22,8 @@ export default function(this: loader.LoaderContext, source: string | Buffer) {
     ...getOptions(this)
   }
   HTML.parse(sourceToString(source))
-    .then(filterDocument)
-    .then(document => createScript(document, options))
+    .then(document => [filterDocument(document), extractScript(document)] as const)
+    .then(([document, script]) => createScript(document, script, options))
     .then(script => this.callback(null, script))
     .catch(e => this.callback(e))
 }

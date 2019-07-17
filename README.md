@@ -59,9 +59,9 @@ By default `true` in production and `false` in development.
 
 It also accepts an object equivalent to the options passed to the [html-minifier](html-minifier-options) package
 
-# [HTML Module](html-module-explainer)
+# [HTML Module][html-module-explainer]
 
-HTML modules is a proposal to add html files as part of the [ES Modules](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/).
+HTML modules is a proposal to add html files as part of the [ES Modules](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/). It is an alternative to the deprecated [HTML imports](https://www.chromestatus.com/feature/5144752345317376)
 
 The idea is to enable developers to incorporate code that depends on markup (very common with [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components)) easily into the JS flow. For example:
 
@@ -108,7 +108,7 @@ import HTML5Element from './HTML5-Element.html'
 customElements.define("html5-element", HTML5Element)
 ```
 
-The ```import.meta.document``` refers to the document that represents the HTML file itself, it is not equivalent to ```document```, as stated in the [HTML Module explainer](html-moduler-explainer).
+The ```import.meta.document``` refers to the document that represents the HTML file itself, it is not equivalent to ```document```, as stated in the [HTML Module explainer][html-module-explainer].
 
 This loader uses [DOMParser](https://developer.mozilla.org/en-US/docs/Web/API/DOMParser) to parse the file as whole into a [Document](https://developer.mozilla.org/en-US/docs/Web/API/Document)
 
